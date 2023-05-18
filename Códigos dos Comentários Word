@@ -1,0 +1,20 @@
+1º comentário:
+df.Poluente.value_counts()
+
+
+2º Comentário:
+import matplotlib.pyplot as plt
+
+# Criar o gráfico de barras
+plt.bar(media_por_poluente.index, media_por_poluente)
+
+# Adicionar rótulos aos eixos
+plt.xlabel('Poluente')
+plt.ylabel('Média da Classificação')
+
+# Adicionar os percentuais nas barras
+for i, valor in enumerate(media_por_poluente):
+    plt.text(i, valor, f'{valor:.2f}', ha='center', va='bottom')
+
+# Exibir o gráfico
+plt.show()
